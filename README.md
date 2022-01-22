@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Nolanjdc：诺兰 安装教程</h1>
+<h1>安装教程</h1>
 </div>
 
 ## \#这是个自用项目文档，请勿传播。
