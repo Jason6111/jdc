@@ -29,7 +29,7 @@ git clone -b main https://ghproxy.com/https://github.com/Jason6111/jdc.git ~/nvj
 git clone -b main https://github.com/Jason6111/jdc.git ~/nvjdc
 ```
 
-2、拉取基础镜像以后不需要拉取镜像了 如果需要拉取我会通知
+2、拉取基础镜像以后不需要拉取镜像了
 
 ```
 docker pull jason61/jdc:latest
