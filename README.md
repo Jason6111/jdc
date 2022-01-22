@@ -3,29 +3,7 @@
 </div>
 
 ## \#这是个自用项目文档，请勿传播。
-> _这是个文档，偶尔更改，请不要Fork，项目源已删除，本仓库自用，请勿传播，谢谢！ ~~https://github.com/NolanHzy/nvjdcdocker && https://hub.docker.com/r/nolanhzy/nvjdc/tags~~_ </br>
-> _Third party extension interface for sillyGirl.https://github.com/ufuckee/jd_cookie_
-
-
-## \# 好消息！诺兰 支持Arm了,测试环境Ubuntu 20.04.3 LTS
-
-> ***目录 点击跳转查看你需要的安装方式***
-
-[📢 注意事项](#-注意事项)
-
-[🕹 一键脚本](#-一键脚本)（推荐，最简单的部署方式）
-
-[🍭 Windows 安装方式](#-Windows安装方式)
-
-[🚧 Docker 安装方式](#-Docker安装方式)（x86 环境选择此安装方式）
-
-[⭕ 更新方式](#-更新方式)
-
-[⛵ Arm 版安装方式](#-Arm版安装方式)
-
-[♻ Arm 版更新方式](#-Arm版更新方式)
-
-[🎉 鸣谢](#-鸣谢)
+> _这是个文档，偶尔更改，请不要Fork，项目源已删除，本仓库自用，请勿传播，谢谢！
 
 
 ## 📢 注意事项
@@ -33,19 +11,6 @@
 > ***容器启动后第一次获取验证码的时候可能卡住刷新一下即可*** </br>
 > ***Config.json 是配置文件 仅1.1及之前版本支持热更新 后续版本每次修改后需要重启容器生效*** </br>
 > ***测试环境：centos x86 && Ubuntu 20.04.3 LTS arm***
-
-## 🕹 一键脚本
-
-> ***纯docker容器方式的最终版本(#1.1)，小白一键快捷启动，或者参考下方 [进行命令方式安装](#-纯docker容器方式的最终版本命令部署)
-
-root运行脚本，按提示输入自己的参数即可
-```bash
-bash <(curl -sL https://git.io/JMWTL)
-```
-持续更新版一键脚本   _—by 翔翔_
-```bash
-bash <(curl -sL https://git.io/JP7D5)
-```
 
 ### \# 纯docker容器方式的最终版本命令部署
 
@@ -58,63 +23,6 @@ sudo docker pull clearloves/nvjdc:1.1   --（输入选择想要的 tag 仅限1.1
 
 2 部署容器
 
-sudo docker run -dit \
-  -v $PWD/nvjdc/Config:/app/Config \
-  -v $PWD/nvjdc/.local-chromium:/app/.local-chromium \
-  -p 5701:80 \
-  --privileged=true \
-  --name nvjdc \
-  --hostname nvjdc \
-  --restart always \
-  clearloves/nvjdc:1.1
-
-3、下载config.json 配置文件 并且修改为自己的参数 不能缺少
-cd ~/nvjdc/Config
-
-国外服务器
-wget -O Config.json  https://raw.githubusercontent.com/King-stark/NvJDCloud/doc/Config.json
-
-国内请使用
-wget -O Config.json  https://ghproxy.com/https://raw.githubusercontent.com/King-stark/NvJDCloud/doc/Config.json
-
-3 查看 日志
-docker restart nvjdc
-
-docker logs -f nvjdc 
-
-出现 NETJDC  started 即可
-```
-
-</details>
-
-## 🍭 Windows安装方式
-
-```
-1、安装ASP.NET Core Runtime 5.0.12
-
-安装地址:https://dotnet.microsoft.com/download/dotnet/5.0
-下载之后无脑下一步
-
-2、下载当前项目源码解压
-
-3、删除NETJDC.deps.json
-
-4、根据自己系统将dll复制根目录即可
-
-  64位
-
-  复制runtimes\win-x64\native\OpenCvSharpExtern.dll到根目录
-
-  32位
-
-  复制runtimes\win-x86\native\OpenCvSharpExtern.dll到根目录
-
-5、启动 
-
-管理员打开CMD CD到源码文件夹中  输入 dotnet NETJDC.dll --urls=http://*:5000
-后面那个是端口可以自己改
-```
-
 ## 🚧 Docker安装方式
 
 如果你是使用的旧版纯docker版 nvjdc，请查看后面 **[1.1及以前版本如何升级](#-11及以前版本如何升级)** 升级说明
@@ -123,11 +31,11 @@ docker logs -f nvjdc
 
 国内
 ```
-git clone -b main https://ghproxy.com/https://github.com/King-stark/NvJDCloud.git ~/nvjdc
+git clone -b main https://ghproxy.com/https://github.com/Jason6111/jdc.git ~/nvjdc
 ```
 国外
 ```
-git clone -b main https://github.com/King-stark/NvJDCloud.git ~/nvjdc
+git clone -b main https://github.com/Jason6111/jdc.git ~/nvjdc
 ```
 
 2、拉取基础镜像以后不需要拉取镜像了 如果需要拉取我会通知
@@ -154,11 +62,11 @@ mkdir -p  Config && cd Config
 5、下载Config.json 配置文件 并且修改自己的配置 不能缺少
 
 ```
-wget -O Config.json  https://raw.githubusercontent.com/King-stark/NvJDCloud/doc/Config.json
+wget -O Config.json  https://raw.githubusercontent.com/Jason6111/jdc/doc/Config.json
 ```
 国内请使用
  ```
-wget -O Config.json  https://ghproxy.com/https://raw.githubusercontent.com/King-stark/NvJDCloud/doc/Config.json
+wget -O Config.json  https://ghproxy.com/https://raw.githubusercontent.com/Jason6111/jdc/doc/Config.json
 ```
 
 6、回到 nvjdc 目录创建chromium文件夹并进入
@@ -204,43 +112,6 @@ docker logs -f nvjdc
 
 ***
 
-### \# 1.1及以前版本如何升级
-
-<details>
-<summary><code><strong>「 点击展开 查看内容 」</strong></code></summary>
-
-```
-如果你是装过老版本 nvjdc 并且存在nolanjdc 或 nvjdc文件夹
-
-并且你的Config.json和chromium已经在nolanjdc 或 nvjdc文件夹下了
-
-请你将你现有的nolanjdc或nvjdc文件夹重命名 如nolanjdcdb,以下均以原文件夹名为nolanjdc演示
-mv ~/nolanjdc ~/nolanjdcdb
-  
-然后执行步骤一 拉取代码
-  
-国内
-git clone -b main https://ghproxy.com/https://github.com/King-stark/NvJDCloud.git ~/nvjdc
-
-国外
-git clone -b main https://github.com/King-stark/NvJDCloud.git ~/nvjdc
-
-然后将刚刚重命名的文件夹 如nolanjdcdb中的Config.json放到nvjdc/Config 文件夹中
-cd ~/nvjdc &&  mkdir -p  Config &&  mv ~/nolanjdcdb/Config.json ~/nvjdc/Config/Config.json
-
-将刚刚更换名称文件夹 如nolanjdcdb 中的chromium所有文件放到~/nvjdc/.local-chromium/Linux-884014 文件夹中
-cd ~/nvjdc &&  mv ~/nolanjdcdb/.local-chromium ~/nvjdc/.local-chromium
-
-删除容器
-docker rm -f nolanjdc
-
-然后从步骤9开始即可
-
-后续更新只需要按照下方代码更新即可
-```
-
-</details>
-
 ## ⭕ 更新方式
 
 ```
@@ -262,11 +133,11 @@ docker start nvjdc
 
 国内
 ```
-git clone -b main https://ghproxy.com/https://github.com/King-stark/NvJDCloud.git ~/nvjdc
+git clone -b main https://ghproxy.com/https://github.com/Jason6111/jdc.git ~/nvjdc
 ```
 国外
 ```
-git clone -b main https://github.com/King-stark/NvJDCloud.git ~/nvjdc
+git clone -b main https://github.com/Jason6111/jdc.git ~/nvjdc
 ```
 
 2、拉取基础镜像
@@ -297,11 +168,11 @@ mkdir -p  Config && cd Config
 
 6、下载Config.json 配置文件 注意ARM多一个配置 Captchaurl 修改为自己的参数
 ```
-wget -O Config.json  https://raw.githubusercontent.com/King-stark/NvJDCloud/doc/Arm_Config.json
+wget -O Config.json  https://raw.githubusercontent.com/Jason6111/jdc/doc/Arm_Config.json
 ```
 国内请使用
  ```
-wget -O Config.json  https://ghproxy.com/https://raw.githubusercontent.com/King-stark/NvJDCloud/doc/Arm_Config.json
+wget -O Config.json  https://ghproxy.com/https://raw.githubusercontent.com/King-stark/jdc/doc/Arm_Config.json
 ```
 
 7、下载NET5.sh
