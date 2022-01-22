@@ -17,7 +17,6 @@
 
 ## 🚧 Docker安装方式
 
-如果你是使用的旧版纯docker版 nvjdc，请查看后面 **[1.1及以前版本如何升级](#-11及以前版本如何升级)** 升级说明
 
 1、拉源码
 
@@ -104,121 +103,13 @@ docker logs -f nvjdc
 
 ***
 
-## ⭕ 更新方式
-
-```
-cd ~/nvjdc
-```
-```
-docker stop nvjdc
-```
-```
-git pull
-```
-```
-docker start nvjdc
-```
-
-## ⛵ Arm版安装方式
-
-1、拉源码
-
-国内
-```
-git clone -b main https://ghproxy.com/https://github.com/Jason6111/jdc.git ~/nvjdc
-```
-国外
-```
-git clone -b main https://github.com/Jason6111/jdc.git ~/nvjdc
-```
-
-2、拉取基础镜像
-
-```
-docker pull clearloves/nvjdc:arm
-```
-
-3、运行基础镜像
-
-```
-docker run   --name nvjdc -p 5703:5000  --restart=always  -d   -it --privileged=true  clearloves/nvjdc:arm
-```
-
-4、安装chromium-browser
-
-```
-apt-get install  chromium-browser
-```
-
-5、创建一个目录放配置
-```
-cd ~/nvjdc
-```
-```
-mkdir -p  Config && cd Config
-```
-
-6、下载Config.json 配置文件 注意ARM多一个配置 Captchaurl 修改为自己的参数
-```
-wget -O Config.json  https://raw.githubusercontent.com/Jason6111/jdc/doc/Arm_Config.json
-```
-国内请使用
- ```
-wget -O Config.json  https://ghproxy.com/https://raw.githubusercontent.com/jason6111/jdc/doc/Arm_Config.json
-```
-
-7、下载NET5.sh
-```
- cd ~/nvjdc && wget https://dot.net/v1/dotnet-install.sh && chmod 777 dotnet-install.sh
-```
-
-8、下载NET5
-```
-./dotnet-install.sh -c 5.0
-```
-
-9、设置 path
-```
-export PATH="$PATH:$HOME/.dotnet"
-```
-10、启动
-```
-nohup dotnet NETJDC.dll --urls=http://*:5701 1>"$(pwd)"/log 2>&1 & #ARM64
-```
-然后访问 http://你的IP:5701 即可
-
-## ♻ Arm版更新方式
-
-查询占用5701的端口进程  如果你的nvjdc是5701就查询 5701
-```
-netstat -lnp|grep 5701
-```
-假如显示如下内容
-tcp6       0      0 :::5701                 :::*                    LISTEN      680536/dotnet  
-
-杀死进程
-```
-kill -9 680536
-```
-```
-cd ~/nvjdc
-```
-```
-git pull
-```
-```
-export PATH="$PATH:$HOME/.dotnet"
-```
-```
-nohup dotnet NETJDC.dll --urls=http://*:5701 1>"$(pwd)"/log 2>&1 & #ARM64
-```
 
 
 ## 🎉 鸣谢
 
 - ***原作 ~~[Nolanhzy](https://github.com/NolanHzy/nvjdcdocker.git)：https://hub.docker.com/r/nolanhzy/nvjdc~~***
 
-- ***备份 clearloves：https://hub.docker.com/r/clearloves/nvjdc***
+- ***备份 clearloves：https://hub.docker.com/r/jason61/jdc***
 
 
 ## 特别声明:
