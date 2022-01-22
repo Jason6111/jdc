@@ -14,13 +14,13 @@
 
 ### \# 纯docker容器方式的最终版本命令部署
 
-<details>
+
 <summary><code><strong>「 点击展开 查看内容 」</strong></code></summary>
 
 ```
 1 拉镜像
 sudo docker pull clearloves/nvjdc:1.1   --（输入选择想要的 tag 仅限1.1及以下，推荐使用一键脚本安装最终版本 1.1 ）
-
+```
 2 部署容器
 
 ## 🚧 Docker安装方式
@@ -99,7 +99,7 @@ cd  ~/nvjdc
 ```
 docker run   --name nvjdc -p 5701:80 -d  -v  "$(pwd)":/app \
 -v /etc/localtime:/etc/localtime:ro \
--it --privileged=true  clearloves/nvjdc:latest
+-it --privileged=true  jason61/jdc:latest
 ```
 
 11、查看 日志 
@@ -172,7 +172,7 @@ wget -O Config.json  https://raw.githubusercontent.com/Jason6111/jdc/doc/Arm_Con
 ```
 国内请使用
  ```
-wget -O Config.json  https://ghproxy.com/https://raw.githubusercontent.com/King-stark/jdc/doc/Arm_Config.json
+wget -O Config.json  https://ghproxy.com/https://raw.githubusercontent.com/jason6111/jdc/doc/Arm_Config.json
 ```
 
 7、下载NET5.sh
