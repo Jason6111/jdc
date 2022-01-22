@@ -33,7 +33,7 @@ git clone -b main https://github.com/Jason6111/jdc.git ~/nvjdc
 2、拉取基础镜像以后不需要拉取镜像了 如果需要拉取我会通知
 
 ```
-docker pull clearloves/nvjdc:latest
+docker pull jason61/jdc:1.0
 ```
 
 3、没有wget工具请执行如下命令，否则跳过
@@ -91,7 +91,7 @@ cd  ~/nvjdc
 ```
 docker run   --name nvjdc -p 5701:80 -d  -v  "$(pwd)":/app \
 -v /etc/localtime:/etc/localtime:ro \
--it --privileged=true  jason61/jdc:latest
+-it --privileged=true  jason61/jdc:1.0
 ```
 
 11、查看 日志 
