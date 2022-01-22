@@ -12,16 +12,8 @@
 > ***Config.json 是配置文件 仅1.1及之前版本支持热更新 后续版本每次修改后需要重启容器生效*** </br>
 > ***测试环境：centos x86 && Ubuntu 20.04.3 LTS arm***
 
-### \# 纯docker容器方式的最终版本命令部署
 
-
-<summary><code><strong>「 点击展开 查看内容 」</strong></code></summary>
-
-```
-1 拉镜像
-sudo docker pull clearloves/nvjdc:1.1   --（输入选择想要的 tag 仅限1.1及以下，推荐使用一键脚本安装最终版本 1.1 ）
-```
-2 部署容器
+1 部署容器
 
 ## 🚧 Docker安装方式
 
