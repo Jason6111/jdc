@@ -52,9 +52,9 @@ mkdir -p  Config && cd Config
 
 ~~5、下载Config.json 配置文件 并且修改自己的配置 不能缺少~~
 
-```
+~~```
 wget -O Config.json  https://raw.githubusercontent.com/Jason6111/jdc/doc/Config.json
-```
+```~~
 ~~国内请使用~~
 ```
 wget -O Config.json  https://ghproxy.com/https://raw.githubusercontent.com/Jason6111/jdc/doc/Config.json
@@ -63,7 +63,7 @@ wget -O Config.json  https://ghproxy.com/https://raw.githubusercontent.com/Jason
 ~~6、回到 nvjdc 目录创建chromium文件夹并~~进入
 
 ```
-~~ cd ~/nvjdc && mkdir -p  .local-chromium/Linux-884014 &&~~ cd .local-chromium/Linux-884014
+cd ~/nvjdc && mkdir -p  .local-chromium/Linux-884014 && cd .local-chromium/Linux-884014
 ```
 
 7、下载 chromium 
