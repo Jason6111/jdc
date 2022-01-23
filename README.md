@@ -43,15 +43,14 @@ yum install wget unzip -y
 
 ~~4、创建一个目录放配置~~
 
-```~~
-cd nvjdc
 ~~```
-
+cd nvjdc
+```~~
 ```
 mkdir -p  Config && cd Config
 ```
 
-5、下载Config.json 配置文件 并且修改自己的配置 不能缺少~~
+~~5、下载Config.json 配置文件 并且修改自己的配置 不能缺少~~
 
 ```
 wget -O Config.json  https://raw.githubusercontent.com/Jason6111/jdc/doc/Config.json
