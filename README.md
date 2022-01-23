@@ -36,7 +36,6 @@ yum install wget unzip -y
 
 ```
 cd nvjdc/.local-chromium/Linux-884014
-
 ```  
 
 5、下载 chromium 
