@@ -41,7 +41,7 @@ docker pull jason61/jdc:latest
 yum install wget unzip -y
 ```
 
-~~4、创建一个目录放配置
+~~4、创建一个目录放配置~~
 
 ```
 cd nvjdc
@@ -58,7 +58,7 @@ wget -O Config.json  https://raw.githubusercontent.com/Jason6111/jdc/doc/Config.
 国内请使用
  ```
 wget -O Config.json  https://ghproxy.com/https://raw.githubusercontent.com/Jason6111/jdc/doc/Config.json
-```~~
+```
 
 6、回到 nvjdc 目录创建chromium文件夹并进入
 
