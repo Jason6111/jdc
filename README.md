@@ -43,11 +43,11 @@ yum install wget unzip -y
 
 ~~4、创建一个目录放配置~~
 
-~~```  
+~~```
 cd nvjdc
 ```~~  
 
-~~```  
+~~```
 mkdir -p  Config && cd Config  
 ```~~
 
