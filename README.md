@@ -59,12 +59,15 @@ mkdir -p  Config && cd Config```~~
 
 6、回到 nvjdc 目录创建chromium文件夹并~~进入
 
-```cd ~/nvjdc && mkdir -p  .local-chromium/Linux-884014 && cd .local-chromium/Linux-884014```
+```
+cd ~/nvjdc && mkdir -p  .local-chromium/Linux-884014 && cd .local-chromium/Linux-884014
+```
 
 7、下载 chromium 
 
 ```
-wget http://npm.taobao.org/mirrors/chromium-browser-snapshots/Linux_x64/884014/chrome-linux.zip && unzip chrome-linux.zip```~~
+wget http://npm.taobao.org/mirrors/chromium-browser-snapshots/Linux_x64/884014/chrome-linux.zip && unzip chrome-linux.zip
+```
 
 8、删除刚刚下载的压缩包 
 
