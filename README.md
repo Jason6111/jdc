@@ -20,31 +20,25 @@ git clone -b main https://ghproxy.com/https://github.com/Jason6111/jdc.git ~/nvj
 git clone -b main https://github.com/Jason6111/jdc.git ~/nvjdc
 ```
 
-2、拉取基础镜像以后不需要拉取镜像了
-
-```
-docker pull jason61/jdc:latest
-```
-
-3、没有wget工具请执行如下命令，否则跳过
+2、没有wget工具请执行如下命令，否则跳过
 
 ```
 yum install wget unzip -y
 ```
 
-4、下载 chromium 
+3、下载 chromium 
 
 ```
 cd nvjdc/.local-chromium/Linux-884014 && wget http://npm.taobao.org/mirrors/chromium-browser-snapshots/Linux_x64/884014/chrome-linux.zip && unzip chrome-linux.zip
 ```
 
-5、删除刚刚下载的压缩包 
+4、删除刚刚下载的压缩包 
 
 ```
 rm  -f chrome-linux.zip
 ```
 
-6、启动镜像
+5、启动镜像
 
 ```
 docker run   --name nvjdc -p 5701:80 -d  -v  "$(pwd)":/app \
@@ -52,7 +46,7 @@ docker run   --name nvjdc -p 5701:80 -d  -v  "$(pwd)":/app \
 -it --privileged=true  jason61/jdc:latest
 ```
 
-7、查看 日志 
+6、查看 日志 
 
 ```
 docker logs -f nvjdc
