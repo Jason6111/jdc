@@ -41,7 +41,7 @@ rm  -f chrome-linux.zip
 5、启动镜像
 
 ```
-docker run   --name nvjdc -p 5701:80 -d  -v  "$(pwd)":/app \
+docker run   --name nvjdc --restart always -p 5701:80 -d  -v  "$(pwd)":/app \
 -v /etc/localtime:/etc/localtime:ro \
 -it --privileged=true  jason61/jdc:latest
 ```
