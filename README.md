@@ -59,7 +59,7 @@ mkdir -p  Config && cd Config```~~
 
 ~~6、回到 nvjdc 目录创建chromium文件夹并~~进入
 
-```~~cd ~/nvjdc && mkdir -p  .local-chromium/Linux-884014 &&~~ cd .local-chromium/Linux-884014```
+~~```cd ~/nvjdc && mkdir -p  .local-chromium/Linux-884014 && ~~cd .local-chromium/Linux-884014```
 
 ~~7、下载 chromium~~ 
 
