@@ -45,7 +45,7 @@ yum install wget unzip -y
 
 ~~```
 cd nvjdc
-~~```~~
+```~~
 ```
 ~~mkdir -p  Config && cd Config~~
 ```
