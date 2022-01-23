@@ -6,15 +6,6 @@
 > 这是个文档，偶尔更改，请不要Fork，项目源已删除，本仓库自用，请勿传播，谢谢！
 
 
-## 📢 注意事项
-
-> ***容器启动后第一次获取验证码的时候可能卡住刷新一下即可*** </br>
-> ***Config.json 是配置文件 仅1.1及之前版本支持热更新 后续版本每次修改后需要重启容器生效*** </br>
-> ***测试环境：centos x86 && Ubuntu 20.04.3 LTS arm***
-
-
-1 部署容器
-
 ## 🚧 Docker安装方式
 
 
@@ -41,50 +32,33 @@ docker pull jason61/jdc:latest
 yum install wget unzip -y
 ```
 
-~~4、创建一个目录放配置~~
+4、进入chromium
 
 ```
-cd nvjdc && mkdir -p  Config && cd Config
-```
+cd nvjdc/.local-chromium/Linux-884014
 
-~~5、下载Config.json 配置文件 并且修改自己的配置 不能缺少~~
-
-```
-wget -O Config.json  https://raw.githubusercontent.com/Jason6111/jdc/doc/Config.json
 ```  
 
-~~国内请使用~~  
-
-```
-wget -O Config.json  https://ghproxy.com/https://raw.githubusercontent.com/Jason6111/jdc/doc/Config.json
-```
-
-6、回到 nvjdc 目录创建chromium文件夹并~~进入
-
-```
-cd ~/nvjdc && mkdir -p  .local-chromium/Linux-884014 && cd .local-chromium/Linux-884014
-```
-
-7、下载 chromium 
+5、下载 chromium 
 
 ```
 wget http://npm.taobao.org/mirrors/chromium-browser-snapshots/Linux_x64/884014/chrome-linux.zip && unzip chrome-linux.zip
 ```
 
-8、删除刚刚下载的压缩包 
+6、删除刚刚下载的压缩包 
 
 ```
 rm  -f chrome-linux.zip
 ```
 
-9、回到nvjdc主目录
+7、回到nvjdc主目录
 
 ```
 cd  ~/nvjdc
 ```
 
 
-10、启动镜像
+8、启动镜像
 
 ```
 docker run   --name nvjdc -p 5701:80 -d  -v  "$(pwd)":/app \
@@ -92,7 +66,7 @@ docker run   --name nvjdc -p 5701:80 -d  -v  "$(pwd)":/app \
 -it --privileged=true  jason61/jdc:latest
 ```
 
-11、查看 日志 
+9、查看 日志 
 
 ```
 docker logs -f nvjdc
