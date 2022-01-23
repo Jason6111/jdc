@@ -32,32 +32,19 @@ docker pull jason61/jdc:latest
 yum install wget unzip -y
 ```
 
-4、进入chromium
+4、下载 chromium 
 
 ```
-cd nvjdc/.local-chromium/Linux-884014
-```  
-
-5、下载 chromium 
-
-```
-wget http://npm.taobao.org/mirrors/chromium-browser-snapshots/Linux_x64/884014/chrome-linux.zip && unzip chrome-linux.zip
+cd nvjdc/.local-chromium/Linux-884014 && wget http://npm.taobao.org/mirrors/chromium-browser-snapshots/Linux_x64/884014/chrome-linux.zip && unzip chrome-linux.zip
 ```
 
-6、删除刚刚下载的压缩包 
+5、删除刚刚下载的压缩包 
 
 ```
 rm  -f chrome-linux.zip
 ```
 
-7、回到nvjdc主目录
-
-```
-cd  ~/nvjdc
-```
-
-
-8、启动镜像
+6、启动镜像
 
 ```
 docker run   --name nvjdc -p 5701:80 -d  -v  "$(pwd)":/app \
@@ -65,7 +52,7 @@ docker run   --name nvjdc -p 5701:80 -d  -v  "$(pwd)":/app \
 -it --privileged=true  jason61/jdc:latest
 ```
 
-9、查看 日志 
+7、查看 日志 
 
 ```
 docker logs -f nvjdc
