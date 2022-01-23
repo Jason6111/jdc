@@ -3,7 +3,7 @@
 </div>
 
 ## \#这是个自用项目文档，请勿传播。
-> _这是个文档，偶尔更改，请不要Fork，项目源已删除，本仓库自用，请勿传播，谢谢！
+> 这是个文档，偶尔更改，请不要Fork，项目源已删除，本仓库自用，请勿传播，谢谢！
 
 
 ## 📢 注意事项
@@ -41,7 +41,7 @@ docker pull jason61/jdc:latest
 yum install wget unzip -y
 ```
 
-4、创建一个目录放配置
+~~4、创建一个目录放配置
 
 ```
 cd nvjdc
@@ -59,7 +59,7 @@ wget -O Config.json  https://raw.githubusercontent.com/Jason6111/jdc/doc/Config.
  ```
 wget -O Config.json  https://ghproxy.com/https://raw.githubusercontent.com/Jason6111/jdc/doc/Config.json
 ```
-
+~~
 6、回到 nvjdc 目录创建chromium文件夹并进入
 
 ```
