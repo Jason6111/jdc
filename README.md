@@ -35,7 +35,7 @@ cd nvjdc/.local-chromium/Linux-884014 && wget http://npm.taobao.org/mirrors/chro
 4、删除刚刚下载的压缩包 
 
 ```
-rm  -f chrome-linux.zip
+rm  -f chrome-linux.zip && cd ~/nvjdc
 ```
 
 5、启动镜像
